@@ -110,10 +110,10 @@
 	{
 		[ theMovie setControlStyle: MPMovieControlStyleNone ];
 	}
-	else if ( [theMovie respondsToSelector:@selector(setMovieControlMode:)] )
-	{
-		[theMovie setMovieControlMode: MPMovieControlModeHidden]; 
-	}	
+//	else if ( [theMovie respondsToSelector:@selector(setMovieControlMode:)] )
+//	{
+//		[theMovie setMovieControlMode: MPMovieControlModeHidden]; 
+//	}	
 	
     // Register for the playback finished notification.
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -157,7 +157,7 @@
     {
         [[theMovie view] removeFromSuperview];
     }
-    [theMovie release];    
+    [_theMovie release];
     _theMovie = nil;
 	_playing = NO;
     
